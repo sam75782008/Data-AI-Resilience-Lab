@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "Data-Driven Hazard Mitigation & Advanced Infrastructure Resilience LAB";
+const description = "Data-AI-Resilience Lab merges AI and infrastructure resilience research focused on structural engineering, seismic risk, and advanced RC analysis.";
+---
+
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100">
+    <Navbar />
+    <main class="bg-slate-950">
+      <div class="mx-auto max-w-7xl px-6 py-10 sm:px-8 lg:px-10">
+        <slot />
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
