@@ -1,0 +1,136 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<Layout>
+  <section class="space-y-16">
+    {/* Header */}
+    <div class="rounded-[2rem] border border-slate-800/80 bg-slate-900/80 p-10 shadow-2xl shadow-slate-950/30 backdrop-blur-xl">
+      <span class="inline-flex rounded-full bg-sky-500/15 px-4 py-1 text-sm font-semibold uppercase tracking-[0.28em] text-sky-300">Our Research</span>
+      <h1 class="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl">Data-Driven & AI-Powered Infrastructure Resilience</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+        We pioneer the integration of artificial intelligence, machine learning, and physics-informed simulations to enhance the resilience of infrastructure systems under natural hazards. Our research spans structural health monitoring, seismic risk assessment, and advanced computational methods.
+      </p>
+    </div>
+
+    {/* Featured Projects */}
+    <div class="space-y-8">
+      <div>
+        <h2 class="text-3xl font-semibold text-white mb-2">Featured Research Projects</h2>
+        <p class="text-slate-400">Advancing the frontiers of resilience engineering through data-driven innovation</p>
+      </div>
+
+      {/* Project 1: HysRCDiffusion */}
+      <ProjectCard
+        title="HysRCDiffusion: AI-Driven Hysteretic Response Prediction"
+        status="進行中 | Ongoing Research Initiative"
+        description="HysRCDiffusion represents a breakthrough in predicting reinforced concrete (RC) structural behavior under seismic loading. By leveraging diffusion models combined with physics-informed constraints, this framework enables accurate and interpretable prediction of hysteretic loops for RC columns and structural components. This approach transcends traditional empirical models and opens new pathways for data-efficient seismic performance assessment."
+        highlights={[
+          "Diffusion Models 與 Physics-Informed Neural Networks 的整合，以捕捉 RC 構件的複雜非線性動力行為",
+          "自動化從實驗數據或高保真數值模擬中學習結構履歷特徵",
+          "可推廣性設計：模型可適用於不同配筋比、混凝土強度與邊界條件的 RC 構件",
+          "在結構易損性評估與快速地震風險決策中的應用潛力"
+        ]}
+        tools={["Diffusion Models", "Physics-Informed ML", "PyTorch", "OpenSees", "TensorFlow"]}
+      />
+
+      {/* Project 2: Hualien RC Building Risk Assessment */}
+      <ProjectCard
+        title="Hualien RC Building Seismic Risk Assessment: Tackling Infill Wall Complexity"
+        status="進行中 | Regional Case Study"
+        description="This project focuses on conducting a comprehensive probabilistic seismic risk assessment of reinforced concrete buildings in Hualien, Taiwan—a region with high seismic activity. The critical challenge and innovation of this work centers on accurately modeling and simulating infill walls (masonry-infilled frames), which significantly affect structural stiffness, strength, and damage patterns during earthquakes. By overcoming these modeling complexities, we achieve substantially more accurate regional risk evaluation and improved decision-making for infrastructure resilience strategies."
+        highlights={[
+          "克服磚牆 (Infill Walls) 模擬困難度：精確建模填充磚牆的非線性行為、裂縫演化與構架互動",
+          "改善整體風險評估準確性：考量磚牆對整體結構勁度、強度與損傷模式的影響，避免高估或低估易損性",
+          "區域尺度應用：自動化建立花蓮地區 RC 建築的有限元素模型庫，整合地點特異性地動與建築特性",
+          "決策支持工具：為都市規劃、耐震補強策略與減災資源配置提供科學依據",
+          "知識轉移：建立可複製的評估框架，供其他地震高風險區域（如伊斯坦堡、台南）應用"
+        ]}
+        tools={["OpenSees", "Abaqus", "Conditional GAN", "LSTM", "Python Scripting"]}
+      />
+    </div>
+
+    {/* Research Methodologies */}
+    <div class="rounded-[2rem] border border-slate-800/80 bg-slate-900/80 p-10 shadow-2xl shadow-slate-950/30 backdrop-blur-xl">
+      <h2 class="text-2xl font-semibold text-white mb-6">Our Research Methodology</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="rounded-3xl border border-slate-700/80 bg-slate-950/90 p-6">
+          <h3 class="flex items-center gap-3 text-lg font-semibold text-sky-300">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/20">①</span>
+            Data Collection & Processing
+          </h3>
+          <p class="mt-4 text-slate-300">整合多源數據：地動記錄、建築物詳查、街景影像、感測器數據等，建立高品質訓練集與驗證集。</p>
+        </div>
+
+        <div class="rounded-3xl border border-slate-700/80 bg-slate-950/90 p-6">
+          <h3 class="flex items-center gap-3 text-lg font-semibold text-sky-300">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/20">②</span>
+            Physics-Informed AI Development
+          </h3>
+          <p class="mt-4 text-slate-300">以物理原理與工程知識為基礎，設計神經網路架構，結合 GNN、LSTM、Diffusion Models 等先進技術。</p>
+        </div>
+
+        <div class="rounded-3xl border border-slate-700/80 bg-slate-950/90 p-6">
+          <h3 class="flex items-center gap-3 text-lg font-semibold text-sky-300">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/20">③</span>
+            Numerical Simulation & Validation
+          </h3>
+          <p class="mt-4 text-slate-300">以 OpenSees、Abaqus 等進行高保真數值模擬，生成合成數據並驗證模型預測精度。</p>
+        </div>
+
+        <div class="rounded-3xl border border-slate-700/80 bg-slate-950/90 p-6">
+          <h3 class="flex items-center gap-3 text-lg font-semibold text-sky-300">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/20">④</span>
+            Regional Application & Decision Support
+          </h3>
+          <p class="mt-4 text-slate-300">將模型應用於地區尺度風險評估，產出易損性曲線、虧損曲線與回復力曲線，支持公共政策與減災決策。</p>
+        </div>
+      </div>
+    </div>
+
+    {/* Research Domains */}
+    <div class="space-y-6">
+      <h2 class="text-2xl font-semibold text-white">Core Research Domains</h2>
+      <div class="grid gap-4 sm:grid-cols-3">
+        <div class="rounded-3xl border border-slate-700/80 bg-slate-950/90 p-6">
+          <h3 class="font-semibold text-sky-200">Structural Engineering</h3>
+          <p class="mt-3 text-slate-300">RC 構架、剪力牆、非韌性結構、填充磚牆、3D 列印混凝土等。</p>
+        </div>
+        <div class="rounded-3xl border border-slate-700/80 bg-slate-950/90 p-6">
+          <h3 class="font-semibold text-sky-200">Seismic Assessment</h3>
+          <p class="mt-3 text-slate-300">機率式地震風險評估、易損性評估、損傷預測、都市尺度評估。</p>
+        </div>
+        <div class="rounded-3xl border border-slate-700/80 bg-slate-950/90 p-6">
+          <h3 class="font-semibold text-sky-200">AI & Machine Learning</h3>
+          <p class="mt-3 text-slate-300">GNN、LSTM、Diffusion Models、Transfer Learning、物理資訊神經網路。</p>
+        </div>
+      </div>
+    </div>
+
+    {/* Collaboration & Impact */}
+    <div class="rounded-[2rem] border border-slate-800/80 bg-slate-900/80 p-10 shadow-2xl shadow-slate-950/30 backdrop-blur-xl">
+      <h2 class="text-2xl font-semibold text-white mb-6">Collaboration & Impact</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div>
+          <p class="text-sm uppercase tracking-[0.3em] text-sky-400">Institutional Partnerships</p>
+          <ul class="mt-4 space-y-2 text-slate-300">
+            <li>• National Center for High-Performance Computing (NCHC)</li>
+            <li>• NHERI DesignSafe Cyberinfrastructure</li>
+            <li>• UCLA Seismic Lab</li>
+            <li>• Texas Advanced Computing Center (TACC)</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm uppercase tracking-[0.3em] text-sky-400">Applications & Outreach</p>
+          <ul class="mt-4 space-y-2 text-slate-300">
+            <li>• Regional earthquake risk mapping</li>
+            <li>• Infrastructure resilience planning</li>
+            <li>• Seismic retrofit prioritization</li>
+            <li>• Disaster risk reduction strategies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
